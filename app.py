@@ -34,6 +34,8 @@ open_api_key = st.sidebar.text_input(
 st.session_state['open_api_key'] = open_api_key
 #load_dotenv(find_dotenv())
 
+openai.api_key = open_api_key
+
 #Function to download the audio from a youtube video
 def download_audio(url, output_file):
     ydl_opts = {
