@@ -31,7 +31,6 @@ open_api_key = st.sidebar.text_input(
     help="Get your API key from https://openai.com/",
     type='password'
 )
-#os.environ["OPENAI_API_KEY"] = open_api_key
 st.session_state['open_api_key'] = open_api_key
 #load_dotenv(find_dotenv())
 
