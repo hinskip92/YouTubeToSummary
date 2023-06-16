@@ -6,6 +6,7 @@ import guidance
 from moviepy.editor import AudioFileClip
 import streamlit as st
 import os
+from pytube import YouTube
 
 output_dir = "./Chunks"
 output_file = "video_audio.mp3"
