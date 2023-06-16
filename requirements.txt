@@ -1,0 +1,6 @@
+openai
+yt-dlp
+moviepy
+streamlit
+gradio
+guidance
