@@ -102,7 +102,7 @@ def generate_summary(text):
     response = openai.ChatCompletion.create(
         model="gpt-3.5-turbo-16k-0613",
         messages=[
-        {"role": "system", "content": "You are a world bestsummarizer. Condense the transcript text, capturing essential points and core points. Include relevant examples, omit excess details, and ensure the summary's length matches the original's complexity."},
+        {"role": "system", "content": "You are a world's best Wild Kratts episode summarizer. Condense the transcript text, capturing essential points and core plot points. Include relevant examples, omit excess details, and ensure the summary's length matches the original's complexity."},
         {"role": "user", "content": f"Please summarize the following text:\n{text}\nSummary:"},
     ],
         max_tokens=11000,
@@ -155,6 +155,7 @@ if __name__ == "__main__":
                     transcripts = transcribe_audio_dir(output_dir)
                     os.remove(audio_file_path)  # Delete saved audio file
                 st.subheader("Summary")
-                st.write(transcripts[0])
+                for transcript in transcripts:  # Loop through the transcripts list
+                    st.write(transcript)
     else:  # If API key is not provided
         st.warning("Please Enter OpenAI API Key")  # Display warning message
