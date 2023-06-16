@@ -7,12 +7,12 @@ from moviepy.editor import AudioFileClip
 import streamlit as st
 import os
 
-output_dir = "C:/Users/Henry/Documents/GitHub/YTTranscriber/Chunks"
+output_dir = "./Chunks"
 output_file = "video_audio.mp3"
 chunk_length = 120 * 15
 transcripts = []
-folder_path = "C:/Users/Henry/Documents/GitHub/YTTranscriber/Chunks"
-audio_file_path = "C:/Users/Henry/Documents/GitHub//YTTranscriber/.DownloadedAudio"
+folder_path = "./Chunks"
+audio_file_path = "./.DownloadedAudio"
 summary_llm = guidance.llms.OpenAI('gpt-3.5-turbo-16k-0613', caching=False)
 
 st.set_page_config(
