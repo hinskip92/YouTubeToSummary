@@ -4,3 +4,4 @@ moviepy
 streamlit
 gradio
 guidance
+ffmpeg
