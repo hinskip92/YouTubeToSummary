@@ -44,7 +44,7 @@ def download_audio(url, output_file):
             'preferredcodec': 'mp3',
             'preferredquality': '192'
         }],
-        'ffmpeg_location': "C:/ffmpeg/bin"
+        #'ffmpeg_location': "C:/ffmpeg/bin"
     }
     with youtube_dl.YoutubeDL(ydl_opts) as ydl:
         ydl.download([url])
