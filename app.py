@@ -103,7 +103,7 @@ def generate_summary(text):
     response = openai.ChatCompletion.create(
         model="gpt-3.5-turbo-16k-0613",
         messages=[
-        {"role": "system", "content": "You are a world's best Wild Kratts episode summarizer. Condense the transcript text, capturing essential points and core plot points. Include relevant examples, omit excess details, and ensure the summary's length matches the original's complexity."},
+        {"role": "system", "content": "You are a world's best summarizer. Condense the transcript text, capturing essential points and core points. Include relevant examples, omit excess details, and ensure the summary's length matches the original's complexity."},
         {"role": "user", "content": f"Please summarize the following text:\n{text}\nSummary:"},
     ],
         max_tokens=11000,
